@@ -5,4 +5,4 @@ This project is intended to help you create an affordable dimmer thermostat for 
 
 PLEASE NOTE THAT THIS PROJECT DOES INVOLVE SOME ELECTRICAL WIRING. DO NOT DO THIS IF YOU DO NOT KNOW WHAT YOU ARE DOING. I am not responsible for any damages if something goes wrong.
 
-![](Breadboard_Anno.jpeg)
+![blee](Breadboard_Anno.jpeg)
