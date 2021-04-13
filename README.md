@@ -40,6 +40,8 @@ This image shows a basic diagram of an Arduino Uno (image credits [here](http://
 
 And that's it!
 
+![](images/breadboard_r.jpg) ![](images/breadboard2_r.jpg)
+
 If you would like and if your breadboard is big enough, you can screw your Arduino into the breadboard using the Arduino screw holes for compactness' sake. HOWEVER, if you do so, make sure your go to the underside of your breadboard and strip any metal that may be touching the screws. I have all the metal in my breadboard above the black sharpie line stripped. This is to make sure that no power will conduct through the metal rails and into the Arduino's screws.
 
-![](images/breadboard.jpg)
+
