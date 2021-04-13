@@ -6,7 +6,7 @@ This project is intended to help you create an affordable dimmer thermostat for 
 PLEASE NOTE THAT THIS PROJECT DOES INVOLVE SOME ELECTRICAL WIRING. DO NOT DO THIS IF YOU DO NOT KNOW WHAT YOU ARE DOING. I am not responsible for any damages if something goes wrong.
 # Materials Needed
 - An Arduino Uno or Arduino Uno Clone ~$15 (I am using Miuzei brand)
-- RobotDyne AC Light Dimmer Module ~$3 [(link here)](https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html)
+- RobotDyn AC Light Dimmer Module ~$3 [(link here)](https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html)
 - Breadboard ~$5
 - Breadboard Jumper Wires ~$5
 - Plastic Electrical Junction Box ~$7
@@ -63,3 +63,22 @@ Your temperature probe should have three wires coming out of the non-probe end: 
 Your breadboard should look something like this:
 
 ![](images/temp1.jpg) ![](images/temp2.jpg)
+
+# Connecting the Dimmer Module
+Back to the dimmer now! We will now hook those four wires up to the Arduino and breadboard. For the purposes of this tutorial, I will be referring to the wire hooked up on the VCC pin as the red wire, the one on the GND pin is the black wire, the one on the Z-C pin is the yellow wire, and the one on the PWM pin is the green wire.
+
+Here is a schematic showing what we're about to wire up (image credits [here](https://robotdyn.com/ac-light-dimmer-module-1-channel-3-3v-5v-logic-ac-50-60hz-220v-110v.html) under "Tutorial"):
+
+![](images/dimmerschem.jpg)
+
+*Note: on the schematic it shows that the green pin is plugged into 13, while we plug it into pin 11. In reality, you can plug it into nearly any pin on the digital pins side. However, if you plug it in anywhere other than pin 11, you'll have to edit my code to get it to work.*
+
+### Connecting your dimmer module to your breadboard and Arduino:
+1. Plug the red wire into any spot along the vertical red rail.
+2. Plug the black wire into any spot along the vertical black rail.
+3. Plug the yellow wire into the 2 pin on the digital pins side of the Arduino.
+4. Plug the green wire into the 11 pin on the digital pins side of the Arduino.
+
+Very simple! Here is an image showing it all wired up: 
+
+![](images/dimmerwired.jpg)
