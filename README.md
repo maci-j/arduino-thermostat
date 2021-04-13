@@ -9,6 +9,6 @@ PLEASE NOTE THAT THIS PROJECT DOES INVOLVE SOME ELECTRICAL WIRING. DO NOT DO THI
 
 *Image credits to magpi.raspberrypi.org*
 
-![](images/arduino.png)
+![](images/arduino.PNG)
 
 *Image credits to **http://arduinotogo.com/2016/09/09/chapter-3-arduino-schematic/**
