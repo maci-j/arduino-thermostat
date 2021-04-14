@@ -23,6 +23,26 @@ I did not include the cost for basic tools needed (screwdriver, drill, wire cutt
 Also, make sure the bulb you're using is actually dimmable. 
 # The Extension Cord and Dimmer
 The dimmer we are using is an AC PWM dimmer. These dimmers basically work by chopping up the electrical signal in order to regulate the amount of power being delivered to the electronic. They're pretty easy to wire up, but please note that this is still working with 120V wires that can really mess you up. You should ALWAYS make sure everything is 100% unplugged before following any of the below steps. If you do everything correctly, you should never actually end up anywhere near a live wire. But once again, if something does go wrong, I take no responsibility. 
+
+This is also the most complicated part of the project, so carefully read the instructions and refer very closely to the image.
+
+*Note: I will be referring to the end of the extension cord you plug stuff into as the "outlet" end and the end that you plug into the wall as the "plug" end.*
+### Preparing the Extension Cord and Dimmer:
+1. Grab your extension cord, dimmer, a pair of wire cutters, wire strippers, a small flat head screwdriver, and four male-female jumper wires (I recommend black, red, yellow/white, and green, but any colors work).
+2. Cut your extension cord close-ish to the outlet end. This will allow your cord to plug in the dimmer box to be longer than the cord to plug in your light. 
+3. Take your wire strippers and strip the ends of each wire. You don't have to strip off much, maybe about a quarter of an inch. Take the now exposed copper wires and twist each individual bundle so they'll hold together better.
+4. Notice on the dimmer the two "boxes", one blue and one green. One of them will have the word "AC-IN" beside it, and the other has the word "LOAD". Each has two small flat head screws on them. Unscrew the screws partially, but do not try to completely pull them out of the boxes.
+5. Take the copper wires attached to the outlet end and insert one bundle into one compartment of the "LOAD" box and the other bundle into the other compartment of the "LOAD" box. Make sure the wires are inserted completely in, and tightly screw the screws down so the wires are held in place.
+6. Take the copper wires attached to the plug end and insert one bundle into one compartment of the "AC-IN" box and the other bundle into the other compartment of the "AC-IN" box. Make sure the wires are inserted completely in, and tightly screw the screws down so the wires are held in place.
+7. Grab your four jumper wires. At one end of the dimmer module, you'll see four metal pins sticking out labeled "VCC", "GND", "Z-C", and "PWM".
+8. Plug the male end of the red wire into "VCC", the end of the black wire into "GND", the end of the white/yellow wire into "Z-C", and the end of the green wire into "PWM".
+9. Line your dimmer module up to your electric junction box, and drill two holes on one end and one hole on the other. The two holes will have your extension cord components pass through them, and the one hole will have all four of your jumper wires pass through it.
+10. Make CERTAIN that no exposed copper wires are outside of the box and close the box.
+
+The hard part is done! I know that likely sounds a bit confusing, so please carefully refer to these images to get a better idea of how your set up should look:
+
+![](images/dimmermod.jpg) ![](images/electricbox.jpg)
+
 # Setting Up Your Breadboard
 For this part of the tutorial, we will focus on connecting your Arduino to your breadboard. 
 
