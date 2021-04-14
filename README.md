@@ -131,7 +131,7 @@ Next, you will need to install the necessary libraries. You will be using three 
 
 To install these libraries, follow the directions [here](https://www.arduino.cc/en/guide/libraries) on the Arduino website. DallasTemperature and OneWire can be found using the library manager, and the RBDdimmer library can be found [here](https://github.com/RobotDynOfficial/RBDDimmer) on the manufacturer's github. Just click Code -> Download ZIP and follow the directions to install a zip file.
 
-Now that everything is set up, time for the code itself! Find the reptilethermostat.ino file on my [GitHub project repository](https://github.com/maci-j/arduino-thermostat). If you click this link, you should see it right at the top of the page. There are two options available; one with the buzzer, one without. Copy paste whichever code you're using into your Arduino IDE, save it, and hit the upload button (making sure your Arduino is plugged in of course). If you have your heating element plugged in, it will likely blink for a second before beginning to work.
+Now that everything is set up, time for the code itself! Find the arduino_thermostat.ino file on my [GitHub project repository](https://github.com/maci-j/arduino-thermostat). If you click this link, you should see it right at the top of the page. There are two options available; one with the buzzer, one without. Copy paste whichever code you're using into your Arduino IDE, save it, and hit the upload button (making sure your Arduino is plugged in of course). If you have your heating element plugged in, it will likely blink for a second before beginning to work.
 
 # Quick Explanation of the Code
 The code can be basically divided into three parts: intialization, set-up, and the main loop. 
