@@ -82,3 +82,22 @@ Here is a schematic showing what we're about to wire up (image credits [here](ht
 Very simple! Here is an image showing it all wired up: 
 
 ![](images/dimmerwired.jpg)
+
+# Time to Set Up Code!
+Now that everything is finally wired up, it's time to code. 
+
+First of all, you will need to download the Arduino software and prepare it for programming. I would recommend following [this](https://www.arduino.cc/en/Guide/ArduinoUno) guide on the official Arduino website. 
+
+Next, you will need to install the necessary libraries. You will be using three libraries: OneWire and DallasTemperature for the temperature probe and RBDdimmer for the dimmer module.
+
+To install these libraries, follow the directions [here](https://www.arduino.cc/en/guide/libraries) on the Arduino website. DallasTemperature and OneWire can be found using the library manager, and the RBDdimmer library can be found [here](https://github.com/RobotDynOfficial/RBDDimmer) on the manufacturer's github. Just click Code -> Download ZIP and follow the directions to install a zip file.
+
+Now that everything is set up, time for the code itself! Find the reptilethermostat.ino file on my [GitHub project repository](https://github.com/maci-j/arduino-thermostat). If you click this link, you should see it right at the top of the page. Copy paste the code into your Arduino IDE, save it, and hit the upload button (making sure your Arduino is plugged in of course). If you have your heating element plugged in, it will likely blink for a second before beginning to work.
+
+
+# One Last Thing...
+I would highly recommend reading through the code before using it, as there are things you will likely have to edit such as your temperature range, what brightness the lamp should start at, how often the temperature probe should check for the temperature, and how much the lamp should increase/decrease its brightness at a time. These are all extremely enclosure and animal dependent. I would highly, *highly* recommend thoroughly testing your system before exposing your animal to it. Make sure everything is wired up properly and your settings are as they should be.
+
+And once again, I am not responsible for any misfortunes that may result from this project. I am just a stranger on the internet explaining how I did something, not an expert in any way. If you choose to make this project, you do so at your own risk. 
+
+# Thank you!!
