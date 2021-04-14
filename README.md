@@ -12,7 +12,7 @@ PLEASE NOTE THAT THIS PROJECT DOES INVOLVE SOME ELECTRICAL WIRING. DO NOT DO THI
 - Plastic Electrical Junction Box ~$7
 - Basic Extention Cord ~$5
 - DS18B20 Temperature Sensor with 4.7KΩ Resistors ~$10
-- Active Buzzer Module ~$5 (OPTIONAL)
+- Active Buzzer Module ~$5 (OPTIONAL, BUT RECOMMENDED)
 
 Approximate Total Cost: $50 (this is based off of prices I looked up and what I paid for things; might vary based on what materials you already have and which brands you buy)
 
@@ -86,6 +86,22 @@ Very simple! Here is an image showing it all wired up:
 
 ![](images/dimmerwired.jpg)
 
+# Connecting the Buzzer (Option, but Highly Recommended)
+The buzzer is not strictly necessary for the thermostat to work, but it is HIGHLY recommended. Its purpose is to make a loud alarm noise if your enclosure gets dangerously hot or cold. It isn't infallible; if the whole arduino set up gets unplugged, it will of course not work. This is just a safety measure in case the light malfunctions or something else causes your enclosure to get dangerously hot and cold.
+
+That in mind, I would definitely recommend getting one because it's not expensive and it's very easy to hook up.
+
+### Connecting the buzzer to the breadboard and Arduino:
+1. Grab two short male to male jumper wires. I would recommend a yellow/white one and a black one for convention's sake, but any colors work.
+2. Examine your buzzer module; you should see two metal pins coming out of it, one long and one short. The long pin is the data pin, and the short pin is the ground pin.
+3. Plug the module into the breadboard. Have each pin go into seperate horizontal rails, and keep note of which pin went into which rail.
+4. Plug one end of the black wire into the same rail that the short pin went into, and plug the other end into the long blue vertical ground rail.
+5. Plug one end of the yellow/white pin into the rail the long pin went into, and plug the other end into the number 5 pin on the digital pins side of the Arduino
+
+That's all! Very easy, very simple, and worth it for the peace of mind and added security. Here it is all wired up:
+
+![](images/buzzer.jpg)
+
 # Time to Set Up Code!
 Now that everything is finally wired up, it's time to code. 
 
@@ -102,9 +118,13 @@ The code can be basically divided into three parts: intialization, set-up, and t
 
 Everything above the line `void setup(void)` is the initialization. This section of the code is basically just gathering all the supplies that the code will need; importing libraries, setting up variables, and telling the Arduino which modules are plugged into which pins. If you decide to change where your pins are plugged in or how bright your lamp starts out at, this is where you will need to edit that.
 
-Everything below `void setup(void)` and above `void loop(void)` is the set up. This part is getting everything ready to go by telling the modules to turn on and what mode they need to be in. There is nothing in this section that you really need to mess with. 
+Everything below `void setup(void)` is the set up. This part is getting everything ready to go by telling the modules to turn on and what mode they need to be in. There is nothing in this section that you really need to mess with. 
 
-Everything below `void loop(void)` is the actual meat of the code. This is the part that is constantly running, one line at a time. It's gathering the temperature information, telling the light to get brighter or dimmer, and telling the buzzer to buzz if (hopefully not) necessary. There are things you can and probably should edit here; if you want to change how often a temperature reading is taken or how much the light dims/brightens at a time, this is where you'd do that. More importantly, this is where you set what your temperature range is and what your danger temperatures are. As is, the code is set up for my specific enclosure and my specific light; you will need to adjust yours to fit your specific situation.
+Everything below `void loop(void)` is the loop controlling the rest of the program. Within the `void loop(void)` block itself, it counts the milliseconds and calls the tempandlights and buzzer functions.
+
+Everything below `void tempandlights() { ` is the code gathering the temperature information, determining if it's within range, and telling the light to get brighter or dimmer. There are things you can and probably should edit here; if you want to change how often a temperature reading is taken or how much the light dims/brightens at a time, this is where you'd do that. More importantly, this is where you set what your temperature range. As is, the code is set up for my specific enclosure and my specific light; you will need to adjust yours to fit your specific situation.
+
+Everything below `void buzzer() {` controls whether or not the buzzer should be going off or not. You should go in here and adjust the temperature danger thresholds at which the buzzer goes off.
 
 # One Last Thing...
 I would highly recommend reading through the code before using it, as there are things you will likely have to edit such as your temperature range, what brightness the lamp should start at, how often the temperature probe should check for the temperature, and how much the lamp should increase/decrease its brightness at a time. These are all extremely enclosure and animal dependent. I would highly, *highly* recommend thoroughly testing your system before exposing your animal to it. Make sure everything is wired up properly and your settings are as they should be.
