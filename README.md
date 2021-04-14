@@ -111,6 +111,8 @@ The buzzer is not strictly necessary for the thermostat to work, but it is HIGHL
 
 That in mind, I would definitely recommend getting one because it's not expensive and it's very easy to hook up.
 
+*Note: if your lower bound temp danger threshold is above room temperature, chances are the device will beep when you turn it on until your light warms up enough to stop the beepage.*
+
 ### Connecting the buzzer to the breadboard and Arduino:
 1. Grab two short male to male jumper wires. I would recommend a yellow/white one and a black one for convention's sake, but any colors work.
 2. Examine your buzzer module; you should see two metal pins coming out of it, one long and one short. The long pin is the data pin, and the short pin is the ground pin.
