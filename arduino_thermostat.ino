@@ -12,12 +12,11 @@
 #include <DallasTemperature.h>
 #include <RBDdimmer.h>//
 /********************************************************************/
-// This section controls what pins the modules are plugged into. They are currently set to 8 for the temp probe and 11 for the dimmer. Do not change the buzzer's pin.
+// This section controls what pins the modules are plugged into. They are currently set to 8 for the temp probe and 11 for the dimmer. 
 #define ONE_WIRE_BUS 8 // This is the pin the temp probe is plugged into
 #define USE_SERIAL  Serial
 #define outputPin  11 // This is the pin the dimmer is plugged into
 #define zerocross  5 
-int buzzerPin = 5; // This is the pin the buzzer is plugged into. Do not change unless you know what you're doing.
 /********************************************************************/
 // Initialises temperature probe
 OneWire oneWire(ONE_WIRE_BUS); 
@@ -50,7 +49,6 @@ void setup(void)
  // Set up for the dimmer:
   USE_SERIAL.begin(9600);
   dimmer.begin(NORMAL_MODE, ON); 
-  pinMode (buzzerPin, OUTPUT);
 } 
 
 
@@ -59,7 +57,6 @@ void loop(void)
   // This counts the number of milliseconds that have passed and calls the tempandlights function and buzzer function
   current_mils = millis(); 
   tempandlights();
-  buzzer();
 }
 
 void tempandlights() {
@@ -107,15 +104,4 @@ void tempandlights() {
     previous_temp_mils = current_mils;
     }
  dimmer.setPower(brightness);
-}
-
-
-void buzzer() {
- // This block causes the buzzer to go off if the temperature goes above or below a certain threshold
-  if ((current_temp > 80) or (current_temp < 83)) { // Change the "83" to your upper threshold and the "80" to your lower threshold
-    digitalWrite (buzzerPin, HIGH);
-    delay (500);
-    digitalWrite (buzzerPin, LOW);
-    delay (500);
-  }
 }
