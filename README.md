@@ -148,8 +148,10 @@ Everything below `void tempandlights() { ` is the code gathering the temperature
 
 Everything below `void buzzer() {` controls whether or not the buzzer should be going off or not. You should go in here and adjust the temperature danger thresholds at which the buzzer goes off.
 
+**Important Note:** Due to a quirk in the way the code is currently written, you need to reset the system every 42 days. This should be pretty easy; just reupload the code, no need to change any settings or anything.
+
 # One Last Thing...
-I would highly recommend reading through the code before using it, as there are things you will likely have to edit such as your temperature range, what brightness the lamp should start at, how often the temperature probe should check for the temperature, and how much the lamp should increase/decrease its brightness at a time. These are all extremely enclosure and animal dependent. I would highly, *highly* recommend thoroughly testing your system before exposing your animal to it. Make sure everything is wired up properly and your settings are as they should be.
+I would highly recommend reading through the code before using it, as there are things you will likely have to edit such as your temperature range, what brightness the lamp should start at, how often the temperature probe should check for the temperature, and how much the lamp should increase/decrease its brightness at a time. These are all extremely enclosure and animal dependent. I would highly, *highly* recommend thoroughly testing your system before exposing your animal to it. Make sure everything is wired up properly and your settings are as they should be. 
 
 And again, I am not responsible for any misfortunes that may result from this project. I am just a stranger on the internet explaining how I did something, not an expert in any way. If you choose to make this project, you do so at your own risk. 
 
