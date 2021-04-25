@@ -10,7 +10,7 @@ PLEASE NOTE THAT THIS PROJECT DOES INVOLVE SOME ELECTRICAL WIRING. DO NOT DO THI
 - Breadboard ~$5
 - Breadboard Jumper Wires ~$5
 - Plastic Electrical Junction Box ~$7
-- Basic Extention Cord ~$5
+- Basic Extension Cord ~$5
 - DS18B20 Temperature Sensor with 4.7KΩ Resistors ~$10
 - Active Buzzer Module ~$5 (OPTIONAL, BUT RECOMMENDED)
 
